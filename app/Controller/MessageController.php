@@ -3,7 +3,12 @@ App::import('Lib', 'Facebook');
 class MessageController extends AppController {
 	public $uses = array();
 	
+	public function index(){
+		
+	}
+	
 	public function count(){
+		
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
 			'appId' => $config['appId'],
@@ -20,8 +25,16 @@ class MessageController extends AppController {
 	  	$this->set('loginUrl', $loginUrl);
 	  	
 		$access_token = $facebook->getAccessToken();
-		debug($access_token);
-		if($access_token) {
+
+	
+		if($access_token && isset($_GET['code'])) {
+			//631117656921497
+			$likes = $facebook->api("/me/likes/19292868552"); 
+
+			if(empty($likes['data'])) {
+				$this->render('like');
+			}
+
 			$threads = $facebook->api(array(
 				'method' => 'fql.query',
 				'query' => 'select recent_authors,message_count from thread where viewer_id = me() and folder_id = 0 order by message_count desc'
@@ -31,8 +44,8 @@ class MessageController extends AppController {
 
 			$result = array();
 			$i = 1;
-			//$message = 'Ai nhắn tin cho bạn nhiều nhất?
-			$message = 'Tag cái nhỉ?
+			$message = 'Ai nhắn tin cho bạn nhiều nhất?
+
 			';
 			
 			foreach($threads as $thread){
@@ -49,19 +62,25 @@ class MessageController extends AppController {
 				));
 				$user['name'] = $response[0]['name'];
 				$result[] = $user;
-				//$message .= $i . '. ' . $user['name'] . ': ' . $user['count'] . '
-				$message .= $i . '. @[' . $user['id'] . ':' . $user['name'] . '] : ' . $user['count'] . '
+				$message .= $i . '. ' . $user['name'] . ': ' . $user['count'] . '
 				';
 				$i++;
-				break;
 			}
 			
 			if($result) {
+				
 				$arg = array(
-					'message' => $message
+					'message' => $message,
+					'link' => 'http://ecomapp.tk/message/count',
+					'name' => 'Ai nhắn tin cho bạn nhiều nhất',
+					'description' => 'Click để biết ai là người nhắn tin cho bạn nhiều nhất trên Facebook',
+					'picture' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6xXM8VmDQrnCBraQ9e0-ZRv_OMbsl51Dv1ljfSUCRPVTNufw'
 				);
 				$facebook->api('/me/feed', 'POST', $arg);
+				$this->render('success');
 			}
+		} else {
+			$this->redirect($loginUrl);
 		}
 		
 	}
