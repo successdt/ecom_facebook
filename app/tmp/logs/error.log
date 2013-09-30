@@ -1,0 +1,314 @@
+2013-09-26 12:29:18 Error: [MissingActionException] Action MessageController::cout() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessageController',
+  'action' => 'cout',
+)
+Request URL: /facebook/message/cout
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-09-26 12:29:24 Error: [MissingViewException] View file "C:\xampp\htdocs\facebook\app\View\Message\count.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\facebook\\app\\View\\Message\\count.ctp',
+)
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-09-26 12:31:37 Error: [MissingViewException] View file "C:\xampp\htdocs\facebook\app\View\Message\count.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\facebook\\app\\View\\Message\\count.ctp',
+)
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-09-26 12:41:25 Error: [FacebookApiException] error setting certificate verify locations:
+  CAfile: C:\xampp\htdocs\facebook\app\Lib/fb_ca_chain_bundle.crt
+  CApath: none
+
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(913): BaseFacebook->makeRequest('https://api-rea...', Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(817): BaseFacebook->_oauthRequest('https://api-rea...', Array)
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:41:59 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 12:42:41 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api('/me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:43:41 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api('/me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:43:44 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api('/me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:44:19 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api('me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:44:26 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api('/me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:45:05 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQA2_StpUGWPE7zmm25PcvyyxhlZV_OwWC44YC8OAPVHQ8ct6jgnLUebgYS7Iy96qjfMjb5gZgirbfgip22tWEZXCOlQTTvATlo12yCRx_joCn0Pltul4wyf8FiYg74OSkcCKWsB2ADYXjQO99ERbUhoE0G1kT6qlfpuAjf6rboFK0ickM97lEY9m3BJq3tWx2dTvzBF-xhswFB0ZQOashpr_vfv78SFP9zpX6PpPpRETUu4mqHKT4T1nQh3fh9LrueqPnORyLtcvby9DcSwmk_513UKQDxIDKD5RnnjubsKdToZAZyX0h_LQyoXzAeBv4w&state=1d11b7c83646852f513d42eadd4ae28e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api('/me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:45:12 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api('/me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:47:17 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api('/me')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 12:50:04 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 12:50:08 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 12:50:10 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 12:50:10 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 12:50:12 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 12:51:45 Error: [FacebookApiException] author_id is not a member of the thread table.
+Request URL: /facebook/message/count?code=AQAlQUfIErWgFcrKKMHwru1XeXiNCAAfukoJ8xxIWhvDqpLcwp5GtQbBf_rK3_pzvjkVsHdNLhuEe1xqKejEIgHTkTq-c_jAcGAxcOrWwEBgYePyGTLtrtSx8xOIFjDNkArIpZA-oCGAwyFaxosqwgBCtNyPfdIScgZN9R6uE44sl5dsMogfFaymHMiDPQ_gnh25SDJ1B8l8QQHUyle0Fzh7JzzbdgbLQ2S4xjPSpuWqRS3ycoDTfp6lL6LIHsBnjHM3RBhtTlnQqVeDDWfqfSQXFhGU1mPKtu9QFmx0IWeNAbKnz7ToOOgpuczXuunruJ4&state=23b36bccd2430b8a6f7ffc50cadb20c1
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 12:53:19 Error: [FacebookApiException] author_id is not a member of the thread table.
+Request URL: /facebook/message/count?code=AQAlQUfIErWgFcrKKMHwru1XeXiNCAAfukoJ8xxIWhvDqpLcwp5GtQbBf_rK3_pzvjkVsHdNLhuEe1xqKejEIgHTkTq-c_jAcGAxcOrWwEBgYePyGTLtrtSx8xOIFjDNkArIpZA-oCGAwyFaxosqwgBCtNyPfdIScgZN9R6uE44sl5dsMogfFaymHMiDPQ_gnh25SDJ1B8l8QQHUyle0Fzh7JzzbdgbLQ2S4xjPSpuWqRS3ycoDTfp6lL6LIHsBnjHM3RBhtTlnQqVeDDWfqfSQXFhGU1mPKtu9QFmx0IWeNAbKnz7ToOOgpuczXuunruJ4&state=23b36bccd2430b8a6f7ffc50cadb20c1
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(28): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 13:06:11 Error: [FacebookApiException] Unsupported get request.
+Request URL: /facebook/message/count?code=AQAlQUfIErWgFcrKKMHwru1XeXiNCAAfukoJ8xxIWhvDqpLcwp5GtQbBf_rK3_pzvjkVsHdNLhuEe1xqKejEIgHTkTq-c_jAcGAxcOrWwEBgYePyGTLtrtSx8xOIFjDNkArIpZA-oCGAwyFaxosqwgBCtNyPfdIScgZN9R6uE44sl5dsMogfFaymHMiDPQ_gnh25SDJ1B8l8QQHUyle0Fzh7JzzbdgbLQ2S4xjPSpuWqRS3ycoDTfp6lL6LIHsBnjHM3RBhtTlnQqVeDDWfqfSQXFhGU1mPKtu9QFmx0IWeNAbKnz7ToOOgpuczXuunruJ4&state=23b36bccd2430b8a6f7ffc50cadb20c1
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/10000290644769...')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(42): BaseFacebook->api('/10000290644769...')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 13:07:58 Error: [FacebookApiException] Unsupported get request.
+Request URL: /facebook/message/count?code=AQAlQUfIErWgFcrKKMHwru1XeXiNCAAfukoJ8xxIWhvDqpLcwp5GtQbBf_rK3_pzvjkVsHdNLhuEe1xqKejEIgHTkTq-c_jAcGAxcOrWwEBgYePyGTLtrtSx8xOIFjDNkArIpZA-oCGAwyFaxosqwgBCtNyPfdIScgZN9R6uE44sl5dsMogfFaymHMiDPQ_gnh25SDJ1B8l8QQHUyle0Fzh7JzzbdgbLQ2S4xjPSpuWqRS3ycoDTfp6lL6LIHsBnjHM3RBhtTlnQqVeDDWfqfSQXFhGU1mPKtu9QFmx0IWeNAbKnz7ToOOgpuczXuunruJ4&state=23b36bccd2430b8a6f7ffc50cadb20c1
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/10000290644769...', 'GET')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(42): BaseFacebook->api('/10000290644769...', 'GET')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-26 13:10:49 Error: [FacebookApiException] Parser error: unexpected end of query.
+Request URL: /facebook/message/count?code=AQAlQUfIErWgFcrKKMHwru1XeXiNCAAfukoJ8xxIWhvDqpLcwp5GtQbBf_rK3_pzvjkVsHdNLhuEe1xqKejEIgHTkTq-c_jAcGAxcOrWwEBgYePyGTLtrtSx8xOIFjDNkArIpZA-oCGAwyFaxosqwgBCtNyPfdIScgZN9R6uE44sl5dsMogfFaymHMiDPQ_gnh25SDJ1B8l8QQHUyle0Fzh7JzzbdgbLQ2S4xjPSpuWqRS3ycoDTfp6lL6LIHsBnjHM3RBhtTlnQqVeDDWfqfSQXFhGU1mPKtu9QFmx0IWeNAbKnz7ToOOgpuczXuunruJ4&state=23b36bccd2430b8a6f7ffc50cadb20c1
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(45): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 13:12:03 Error: [FacebookApiException] Parser error: unexpected end of query.
+Request URL: /facebook/message/count?code=AQAlQUfIErWgFcrKKMHwru1XeXiNCAAfukoJ8xxIWhvDqpLcwp5GtQbBf_rK3_pzvjkVsHdNLhuEe1xqKejEIgHTkTq-c_jAcGAxcOrWwEBgYePyGTLtrtSx8xOIFjDNkArIpZA-oCGAwyFaxosqwgBCtNyPfdIScgZN9R6uE44sl5dsMogfFaymHMiDPQ_gnh25SDJ1B8l8QQHUyle0Fzh7JzzbdgbLQ2S4xjPSpuWqRS3ycoDTfp6lL6LIHsBnjHM3RBhtTlnQqVeDDWfqfSQXFhGU1mPKtu9QFmx0IWeNAbKnz7ToOOgpuczXuunruJ4&state=23b36bccd2430b8a6f7ffc50cadb20c1
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(45): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-26 13:22:44 Error: [FacebookApiException] (#200) The user hasn't authorized the application to perform this action
+Request URL: /facebook/message/count?code=AQAlQUfIErWgFcrKKMHwru1XeXiNCAAfukoJ8xxIWhvDqpLcwp5GtQbBf_rK3_pzvjkVsHdNLhuEe1xqKejEIgHTkTq-c_jAcGAxcOrWwEBgYePyGTLtrtSx8xOIFjDNkArIpZA-oCGAwyFaxosqwgBCtNyPfdIScgZN9R6uE44sl5dsMogfFaymHMiDPQ_gnh25SDJ1B8l8QQHUyle0Fzh7JzzbdgbLQ2S4xjPSpuWqRS3ycoDTfp6lL6LIHsBnjHM3RBhtTlnQqVeDDWfqfSQXFhGU1mPKtu9QFmx0IWeNAbKnz7ToOOgpuczXuunruJ4&state=23b36bccd2430b8a6f7ffc50cadb20c1
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me/feed', 'POST', Array)
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(57): BaseFacebook->api('/me/feed', 'POST', Array)
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
