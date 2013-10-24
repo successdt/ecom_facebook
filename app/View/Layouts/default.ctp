@@ -41,7 +41,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-			<h1>Mộ sản phẩm của EWP</h1>
+			<h1>Một sản phẩm của EWP</h1>
 		</div>
 		<div id="content">
 
