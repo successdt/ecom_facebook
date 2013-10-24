@@ -21,4 +21,4 @@ window.fbAsyncInit = function() {
  }());
 //-->
 </script>
-<div class="fb-like-box" layout="button_count" data-href="https://www.facebook.com/hpfc.vn" data-layout="box_count" data-width="292" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+<div class="fb-like-box" layout="button_count" data-href="https://www.facebook.com/pages/Ong-Vàng-Shop/119282301570480" data-layout="box_count" data-width="292" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
