@@ -32,6 +32,7 @@ class MessageController extends AppController {
 			$likes = $facebook->api("/me/likes/278992552121199"); 
 
 			if(empty($likes['data'])) {
+				debug($likes);
 				exit($this->render('like'));
 			}
 

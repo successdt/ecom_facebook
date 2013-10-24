@@ -4,7 +4,7 @@
 <script type="text/javascript">
 <!--
 window.fbAsyncInit = function() {
- FB.init({appId: '190385031146259', status: true, cookie: true, xfbml: true});
+ FB.init({appId: '193983577403302', status: true, cookie: true, xfbml: true});
  FB.Event.subscribe('edge.create', function(href, widget) {
  	// Do something, e.g. track the click on the "Like" button here
 	//window.location.href = "<?php echo $this->Html->url(array('controller' => 'message', 'action' => 'count')) ?>";
