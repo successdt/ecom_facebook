@@ -25,6 +25,7 @@ window.fbAsyncInit = function() {
 */ ?>
 <div id="fb-root"></div>
 <script>
+/*
 window.fbAsyncInit = function() {
  FB.init({appId: '190385031146259', status: true, cookie: true, xfbml: true});
  FB.Event.subscribe('edge.create', function(href, widget) {
@@ -33,6 +34,7 @@ window.fbAsyncInit = function() {
 	location.reload();
 });
 };
+*/
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
