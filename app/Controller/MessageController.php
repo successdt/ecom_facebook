@@ -8,7 +8,7 @@ class MessageController extends AppController {
 	}
 	
 	public function count(){
-		
+		$this->autoRender=false;
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
 			'appId' => $config['appId'],
@@ -29,10 +29,10 @@ class MessageController extends AppController {
 	
 		if($access_token && isset($_GET['code'])) {
 			//631117656921497
-			$likes = $facebook->api("/me/likes/19292868552"); 
+			$likes = $facebook->api("/me/likes/278992552121199"); 
 
 			if(empty($likes['data'])) {
-				$this->render('like');
+				exit($this->render('like'));
 			}
 
 			$threads = $facebook->api(array(
@@ -71,7 +71,7 @@ class MessageController extends AppController {
 				
 				$arg = array(
 					'message' => $message,
-					'link' => 'http://ecomapp.tk/message/count',
+					'link' => 'http://ecomfacebook.tk/message/count',
 					'name' => 'Ai nhắn tin cho bạn nhiều nhất',
 					'description' => 'Click để biết ai là người nhắn tin cho bạn nhiều nhất trên Facebook',
 					'picture' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6xXM8VmDQrnCBraQ9e0-ZRv_OMbsl51Dv1ljfSUCRPVTNufw'

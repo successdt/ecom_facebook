@@ -312,3 +312,476 @@ Stack Trace:
 #7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
 #8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2013-09-30 10:59:18 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(27): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 10:59:50 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(30): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:01:37 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(27): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:01:53 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(27): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:01:55 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(27): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:01:56 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(27): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:09:57 Error: [FacebookApiException] Error validating access token: User 100000102092930 has not authorized application 190385031146259.
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:10 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:12 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:14 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:15 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:46 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:47 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:48 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:10:49 Error: [FacebookApiException] Requires user session
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(821): BaseFacebook->throwAPIException(Array)
+#1 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(652): BaseFacebook->_restserver(Array)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api(Array)
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-09-30 11:34:55 Error: Fatal Error (1): Call to undefined method View::script() in [C:\xampp\htdocs\facebook\app\View\Layouts\default.ctp, line 38]
+2013-09-30 11:34:55 Error: [FatalErrorException] Call to undefined method View::script()
+Request URL: /facebook/message
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 38)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\xampp\htdocs...', 38, Array)
+#2 C:\xampp\htdocs\facebook\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\xampp\htdocs...', 38, Array)
+#3 C:\xampp\htdocs\facebook\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-09-30 11:35:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-30 11:35:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-30 11:36:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-09-30 13:02:49 Error: [FacebookApiException] (#3506) The action type likes:Like does not exist or is not approved, so app 190385031146259 can only publish to administrators, developers, and testers of the app.  User 100000102092930 is not one of those roles.
+Request URL: /facebook/message/count?code=AQA6IvPSkMva56x6JLL16q_XLOJzw6zS-6B-Yc2FS9WwInyqahwzy4O3r3UietbG8shwEBIxcqqA02sVD5VbvdcayuVypljQrAGDrf6TL0RKJc7m7dmqH-HsKvJN9VTFGd3u---AvaeObs3CY4lL1yV5SsiRPg0NldHlSGLy3uNKLALVeRiddBXmzrBpWsvQZZPSyEJi6rv84NmS3rBp04GZiYJmJcLGKtg-8Kv6BAigzAZWk-g4TJV5wfbjWiEZ5upgyIYr-9L49pMmi0E5P6ewE3jEvVJmXbrnNZ_v_4RQSsYQ8JcmLIoLDh9t7DdrtIw&state=7ce26ea1d5dadbdf3e513f564cc0eecf
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me/og.likes', 'POST', Array)
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(74): BaseFacebook->api('/me/og.likes', 'POST', Array)
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-30 18:05:07 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me/likes/63111...')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(29): BaseFacebook->api('/me/likes/63111...')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-09-30 19:39:56 Error: [FacebookApiException] Error validating access token: User 100000102092930 has not authorized application 190385031146259.
+Request URL: /message/count?code=AQBHDQ1av6O7F70y3k5A-wKC3owq0Nf8CZ6y_BxzguPTbOvmgyU380EIFn1PmZG3MMYksJNIMZC6KE3w8CezfGfr9LYrnsNrviChYXcth1WVil2YnP6r4yZyWa5v2ILki9q94V2ktadS1wVvW2xtChse3cstQT4TRrMXbKPU3V-tXM7NFZKMtmlCFurTMuBnq5GGoAw_pIcZT3nJvuKgfQnqjOxaUTddDtaSYu_2XBPBSCu12OLIFzw8Qu8Q6YiXmUoolan20RwkgTXc6FoXOn1GlHkAuC_Up1BWy7vgiDzNYSNN4FAgvrPj2j8eQVnKggo&state=b7b69dc5b4263e3c7a4d04bc09721f86
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me/likes/19292...')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(32): BaseFacebook->api('/me/likes/19292...')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-01 03:09:28 Error: [FacebookApiException] Error validating access token: User 100000102092930 has not authorized application 190385031146259.
+Request URL: /facebook/message/count?code=AQAAYtJyFw3HYr6tSdervrgB03M8P8w-iGxNRwETCm6vqMH-6SbB_DiTqxXpWEaps6jFLwu0FsxQBlsT7J_bbK6w1RXGpIWbZp-M96-sTm0DkWr2o7TK938AqwHxadWsopXYRvh_vSNSXMKpNSUTDBnLjXpF_2BFmMcQr5KH7F_4Bwx-N6FUBYl_QVaOonlfiDyxME-9CfNJziIQ8NgdStEmzfFqqDlAudc4psOBVkEyN76LIe6L7ME_aNrDoOaJG1N82cB4D_s2oaQWgfwkG4a6-AlcdKHglluBUyFw0l3rcU1oeC2kh9TylPZUMljGwnw&state=7a63ca3c20128638bba43a5c0dc87504
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me/likes/19292...')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(32): BaseFacebook->api('/me/likes/19292...')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-24 04:21:00 Error: [MissingControllerException] Controller class CountController could not be found.
+Exception Attributes: array (
+  'class' => 'CountController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/count
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:24:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:25:09 Error: [MissingViewException] View file "C:\xampp\htdocs\facebook\app\View\Message\like.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\xampp\\htdocs\\facebook\\app\\View\\Message\\like.ctp',
+)
+Request URL: /facebook/message/count?code=AQAqpOyQRUJTe4tijQJvK1sP4EhbVlnGnkg93j3lM3sIThwCkm2JyFvKzC6B5kBO4F1t6kM0VN-LWwCT6b1i_qOkI9_4h4hwnc7q5pH3HhyJWCThqb6swlA3PfJyw1GYpH4DF67MAd7JUto5pMS24GzZN3rfZv1DzdUGHFGdcl403w0KOaF3S1RwhksXJ9otl5WKuxy2uA8OUxZ923i70DIm6aq9zwtSJmu5S57S4vZyw2cQ6aHQ8hHUeF4qk19dz_b9RQvoRoFiD3kPwgR5Quj-tzqk3KkS9X2LUsYbakzfPhPKAY-InzkmN5ZfnSRefu8&state=eb932feec0bd8b92ee548fc0a1e6bfa3
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\lib\Cake\View\View.php(459): View->_getViewFileName('like')
+#1 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(952): View->render('like', NULL)
+#2 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(35): Controller->render('like')
+#3 [internal function]: MessageController->count()
+#4 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#5 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-10-24 04:25:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:25:52 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\facebook\app\Controller\MessageController.php, line 36]
+2013-10-24 04:25:52 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /facebook/message/count?code=AQAqpOyQRUJTe4tijQJvK1sP4EhbVlnGnkg93j3lM3sIThwCkm2JyFvKzC6B5kBO4F1t6kM0VN-LWwCT6b1i_qOkI9_4h4hwnc7q5pH3HhyJWCThqb6swlA3PfJyw1GYpH4DF67MAd7JUto5pMS24GzZN3rfZv1DzdUGHFGdcl403w0KOaF3S1RwhksXJ9otl5WKuxy2uA8OUxZ923i70DIm6aq9zwtSJmu5S57S4vZyw2cQ6aHQ8hHUeF4qk19dz_b9RQvoRoFiD3kPwgR5Quj-tzqk3KkS9X2LUsYbakzfPhPKAY-InzkmN5ZfnSRefu8&state=eb932feec0bd8b92ee548fc0a1e6bfa3
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\xampp\htdocs...', 36, Array)
+#2 C:\xampp\htdocs\facebook\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\xampp\htdocs...', 36, Array)
+#3 C:\xampp\htdocs\facebook\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-10-24 04:25:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:26:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:28:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:29:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:29:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:30:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:30:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:31:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:31:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:32:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:33:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:33:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:41:26 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQAEd5VwxCnrrl95sEd-7_CrSLJBKO7slPosEt74VSpQSyWbCvgMxMs-rjOMPljyui-MPkCti7b9Bcy04lw2EtNozcUv_hHa7RPYFTvRtobW1iKeb7AwNeIOPVi0bTe1Rn0j8xk_d8aITZVYa--QhJkTgxcggE2C9zaLnA0bUNOI2j2IwZlx5O73zsEB0p0FxFtDt6Eya_yc2_3s7ljjAJ0VeTvXETP1Njtjjuu5KTLQXicR-qVjPzfEOF2AChY1g5kRWJ67TFPoiKjW2U5DvVDnQTn2y9qB3pPtitMKCmSrtLeSah8OHp0QBAom2MJpqao&state=2b080acb96d49f5613bb60804ff25f43
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me/likes/27899...')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(32): BaseFacebook->api('/me/likes/27899...')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-24 04:41:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-10-24 04:41:42 Error: [FacebookApiException] An active access token must be used to query information about the current user.
+Request URL: /facebook/message/count?code=AQBA2DaYfOvW-b2JwE-c2xOJt7RmF109sLTamVfta0dvMLjqAANFcNLqLTdTQt8g1u1Wmr35ik7meDyn502ZC_x-5A59tc4hhehE0sJl6vaCy9782OpCU_07XEqzX6XvouObx1KZvgn_fNTv_NfxDTvZ3hFTrywBDqxUN4UE-Qr0feuqHsKLe2vc2kR5N7KXNTpcwS6ixmttoNQsZx3Tw_QKhIN5Y1JGB9hWs_eTC0SXrQWyDs1X74FiCmJQoIuzOhJMrCZTBrvWgeKMVLJo4Vx8ue_J0n6GfyXk9IrInXrEq8b82KgqoO48shk0BzBMbnc&state=b6d01fb99318bc59a9eb5f8b109e198e
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(880): BaseFacebook->throwAPIException(Array)
+#1 [internal function]: BaseFacebook->_graph('/me/likes/27899...')
+#2 C:\xampp\htdocs\facebook\app\Lib\base_facebook.php(654): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\facebook\app\Controller\MessageController.php(32): BaseFacebook->api('/me/likes/27899...')
+#4 [internal function]: MessageController->count()
+#5 C:\xampp\htdocs\facebook\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(MessageController), Array)
+#6 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\facebook\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(MessageController), Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-10-24 04:41:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /facebook/js/jquery-2.0.3.min.map
+Stack Trace:
+#0 C:\xampp\htdocs\facebook\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
