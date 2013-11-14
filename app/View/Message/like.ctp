@@ -37,4 +37,5 @@ window.fbAsyncInit = function() {
  document.getElementById('fb-root').appendChild(e);
  }());
 </script>
-<div class="fb-like-box" layout="box_count" href="https://www.facebook.com/pages/Ong-Vàng-Shop/119282301570480" data-layout="box_count" data-width="292" data-colorscheme="light" data-show-faces="false" data-header="false" show_faces="false" data-stream="false" data-show-border="false"></div>
+<fb:like href="https://www.facebook.com/pages/Ong-Vàng-Shop/119282301570480" data-send="false" send="false" layout="box_count" width="70" show_faces="false" font="arial" fb-xfbml-state="rendered" class="fb_edge_widget_with_comment fb_iframe_widget">
+</fb:like>
