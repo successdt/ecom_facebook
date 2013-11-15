@@ -44,6 +44,6 @@ window.fbAsyncInit = function() {
 <script type="text/javascript">
 	function likePage(){
 		$('.fb_edge_widget_with_comment').html('<h1>Đợi chút nhé</h1>');
-		window.location = window.location.pathname;
+		window.location = 'http://ecomfacebook.tk/message/count';
 	}
 </script>
