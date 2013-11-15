@@ -8,6 +8,7 @@ class MessageController extends AppController {
 	}
 	
 	public function count(){
+		session_start();
 		$this->autoRender=false;
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
