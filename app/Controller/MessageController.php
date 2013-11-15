@@ -29,10 +29,10 @@ class MessageController extends AppController {
 	
 		if($access_token && isset($_GET['code'])) {
 			
-			$facebook->setAccessToken($access_token);
+			$facebook->setAccessToken($facebook->getAccessTokenFromCode($_GET['code']));
 			
 			//631117656921497
-			$likes = $facebook->api("/me/likes/119282301570480"); 
+			$likes = $facebook->api("/me/likes/631117656921497"); 
 
 
 			if(empty($likes['data'])) {
