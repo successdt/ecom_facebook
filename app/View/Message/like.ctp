@@ -1,4 +1,4 @@
-<h2>Bạn cần like để sử dụng ứng dụng</h2>
+<h2 class="title">Bạn cần like để sử dụng ứng dụng</h2>
 <div id="fb-root"></div>
 <script type="text/javascript">
 /*
@@ -43,7 +43,8 @@ window.fbAsyncInit = function() {
 
 <script type="text/javascript">
 	function likePage(){
-		$('.fb_edge_widget_with_comment').html('<h1>Đợi chút nhé</h1>');
+		$('.fb_edge_widget_with_comment').html('');
+		$('.title').html('Đợi chút nhé');
 		//window.location = 'http://ecomfacebook.tk/message/count';
 		location.reload();
 	}
