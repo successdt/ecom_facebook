@@ -29,7 +29,7 @@ class MessageController extends AppController {
 	
 		if($access_token && isset($_GET['code'])) {
 			
-			$facebook->setAccessToken('');
+			
 			
 			//631117656921497
 			$likes = $facebook->api("/me/likes/119282301570480"); 
@@ -82,6 +82,7 @@ class MessageController extends AppController {
 				);
 				$facebook->api('/me/feed', 'POST', $arg);
 				$this->render('success');
+				$facebook->setAccessToken(0);
 			}
 		} else {
 			$this->redirect($loginUrl);
