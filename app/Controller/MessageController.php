@@ -28,7 +28,7 @@ class MessageController extends AppController {
 		$access_token = $facebook->getAccessToken();
 		
 		if(!$access_token) $access_token = $this->Cookie->read('access_token');
-	
+		debug($access_token);die;
 		if($access_token) {
 			//631117656921497
 			$likes = $facebook->api("/me/likes/119282301570480"); 
