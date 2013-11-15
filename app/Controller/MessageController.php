@@ -2,14 +2,13 @@
 App::import('Lib', 'Facebook');
 class MessageController extends AppController {
 	public $uses = array();
+	public $components = array('Cookie');
 	
 	public function index(){
 		
 	}
 	
 	public function count(){
-		session_start();
-		$this->Session->destroy();
 		$this->autoRender=false;
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
@@ -27,12 +26,13 @@ class MessageController extends AppController {
 	  	$this->set('loginUrl', $loginUrl);
    	
 		$access_token = $facebook->getAccessToken();
-
+		
+		if(!$access_token) $access_token = $this->Cookie->read('access_token');
 	
-		if($access_token && isset($_GET['code'])) {
+		if($access_token) {
 			//631117656921497
 			$likes = $facebook->api("/me/likes/119282301570480"); 
-
+			$this->Cookie->write('access_token', $access_token);
 
 			if(empty($likes['data'])) {
 				exit($this->render('like'));
