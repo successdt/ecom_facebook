@@ -23,11 +23,11 @@ class MessageController extends AppController {
 			'scope' => 'read_mailbox,publish_stream'  
 		));
 	  	$this->set('loginUrl', $loginUrl);
-	  	
+   	
 		$access_token = $facebook->getAccessToken();
 
 	
-		if($access_token || isset($_GET['code'])) {
+		if($access_token) {
 			//631117656921497
 			$likes = $facebook->api("/me/likes/119282301570480"); 
 
