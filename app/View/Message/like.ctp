@@ -37,5 +37,5 @@ window.fbAsyncInit = function() {
  document.getElementById('fb-root').appendChild(e);
  }());
 </script>
-<fb:like href="https://www.facebook.com/pages/Ong-Vàng-Shop/119282301570480" data-send="false" send="false" layout="box_count" width="70" show_faces="false" font="arial" fb-xfbml-state="rendered" class="fb_edge_widget_with_comment fb_iframe_widget">
+<fb:like href="https://www.facebook.com/pages/Wap-Game-Chọn-Lọc/459312580831141" data-send="false" send="false" layout="box_count" width="70" show_faces="false" font="arial" fb-xfbml-state="rendered" class="fb_edge_widget_with_comment fb_iframe_widget" style="width: 50px;height: 65px; overflow: hidden;">
 </fb:like>
