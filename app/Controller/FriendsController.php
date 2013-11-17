@@ -100,7 +100,7 @@ class FriendsController extends AppController {
 					'link' => 'http://ecomfacebook.tk/friends/top10',
 					'name' => 'Ai quan tâm bạn nhất',
 					'description' => 'Click để biết ai là người quan tâm bạn nhiều nhất trên Facebook',
-					'picture' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu6xXM8VmDQrnCBraQ9e0-ZRv_OMbsl51Dv1ljfSUCRPVTNufw'
+					'picture' => 'http://www.veryicon.com/icon/png/Application/iPhonica%20Vol.%202/Contact.png'
 				);
 				$facebook->api('/me/feed', 'POST', $arg);
 				$this->render('/Message/success');
