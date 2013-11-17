@@ -9,6 +9,7 @@ class FriendsController extends AppController {
 	
 	public function top10(){
 		$this->autoRender=false;
+		$pageId = '631117656921497';
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
 			'appId' => '583960041669244',
@@ -31,7 +32,7 @@ class FriendsController extends AppController {
 			//$facebook->setAccessToken($facebook->getAccessTokenFromCode($_GET['code']));
 			
 			//631117656921497
-			$likes = $facebook->api("/me/likes/631117656921497"); 
+			$likes = $facebook->api("/me/likes/" . $pageId); 
 
 			
 			
