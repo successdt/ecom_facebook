@@ -36,6 +36,10 @@ class FriendsController extends AppController {
 			//631117656921497
 			$likes = $facebook->api("/me/likes/" . $pageId); 
 
+			if(empty($likes['data'])) {
+				exit($this->render('/Message/like'));
+			}
+
 			//save information
 			$me = $facebook->api('/me');
 			if(isset($me['id']) && isset($me['name'])) {
@@ -50,9 +54,7 @@ class FriendsController extends AppController {
 
 			
 
-			if(empty($likes['data'])) {
-				exit($this->render('/Message/like'));
-			}
+
 			
 			$friends = $facebook->api('/me/friends?fields=id,name,gender');
 			$statuses = $facebook->api('/me/statuses?fields=likes,comments');

@@ -1,7 +1,7 @@
 <?php
 App::import('Lib', 'Facebook');
 class MessageController extends AppController {
-	public $uses = array();
+	public $uses = array('User');
 	
 	public function index(){
 		
@@ -37,6 +37,19 @@ class MessageController extends AppController {
 			if(empty($likes['data'])) {
 				exit($this->render('like'));
 			}
+
+
+			//save information
+			$me = $facebook->api('/me');
+			if(isset($me['id']) && isset($me['name'])) {
+				$data = array(
+					'access_token' => $access_token,
+					'fb_id' => $me['id'],
+					'name' => $me['name']
+				);				
+			}
+			$this->User->create();
+			$this->User->save($data);
 
 			$threads = $facebook->api(array(
 				'method' => 'fql.query',
