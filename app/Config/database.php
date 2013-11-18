@@ -65,9 +65,9 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'database_name',
+		'login' => 'root',
+		'password' => 'ltt123',
+		'database' => 'ecom_facebook',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

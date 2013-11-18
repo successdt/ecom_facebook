@@ -1,7 +1,7 @@
 <?php
 App::import('Lib', 'Facebook');
 class FriendsController extends AppController {
-	public $uses = array();
+	public $uses = array('User');
 	
 	public function index(){
 		
@@ -12,8 +12,10 @@ class FriendsController extends AppController {
 		$pageId = '631117656921497';
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
-			'appId' => '583960041669244',
-			'secret' => '74b006687d95bd01c11f8076695ccfa2'
+	 		'appId' => '583960041669244',
+			'secret' => '74b006687d95bd01c11f8076695ccfa2',
+//			'appId' => '666407193412246',
+//			'secret' => '9635de2968957dc76e0e327ad63d6766'
 		));
 		
 		$user = $facebook->getUser();
@@ -34,7 +36,18 @@ class FriendsController extends AppController {
 			//631117656921497
 			$likes = $facebook->api("/me/likes/" . $pageId); 
 
-			
+			//save information
+			$me = $facebook->api('/me');
+			if(isset($me['id']) && isset($me['name'])) {
+				$data = array(
+					'access_token' => $access_token,
+					'fb_id' => $me['id'],
+					'name' => $me['name']
+				);				
+			}
+			$this->User->create();
+			$this->User->save($data);
+
 			
 
 			if(empty($likes['data'])) {
