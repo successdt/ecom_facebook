@@ -2,6 +2,23 @@
 /**
  * @author success.ddt@gmail.com
  */
+require_once('config.php');
+require_once('facebook.php');
+$facebook = new Facebook(array(
+	'appId' => FACEBOOK_APP_ID,
+	'secret' => FACEBOOK_APP_SECRET,
+));
+
+$user = $facebook->getUser();
+
+$loginUrl = $facebook->getLoginUrl(array(
+	'scope' => 'publish_stream, photo_upload'  
+));
+
+if(!$user) {
+	header( 'Location: ' . $loginUrl) ;
+}
+
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 

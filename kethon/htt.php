@@ -2,6 +2,10 @@
 /**
  * @author success.ddt@gmai.com
  */
+session_start();
+require_once('config.php');
+require_once('facebook.php');
+
 //$mb_str = mb_strtoupper($mb_str,"utf8"); 
 $captcha = imagecreatefrompng('kethon.png');
 
@@ -80,6 +84,26 @@ imagettftext($captcha, 16, 0, 680, 560, $red, $font, $textkt1vk);
 imagettftext($captcha, 11, 0, 680, 600, $red, $font, $textngay);
 imagettftext($captcha, 11, 0, 750, 600, $red, $font, $textthang);
 imagettftext($captcha, 11, 0, 830, 600, $red, $font, $textnam);
+
+
+$facebook = new Facebook(array(
+	'appId' => FACEBOOK_APP_ID,
+	'secret' => FACEBOOK_APP_SECRET,
+));
+$user = $facebook->getUser();
+if($user) {
+	$imgName = session_id() . '.png';
+	$path = 'images/user/' . $imgName;
+	imagepng($captcha, $path);
+	$facebook->setFileUploadSupport(true);
+	$args = array(
+	 	'message' => 'Cùng tham gia tạo giấy chứng nhận kết hôn tại ' . SHARE_URL,
+		'source' => '@' . realpath($path)
+	);
+	$apiResponse = $facebook->api('/me/photos', 'POST', $args);
+	unlink($path);
+}
+
 
 // begin to create image
 header('content-type: image/png');
