@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^giaychungnhankethon.png* htt.php [QSA]
+
+RewriteRule ^index.html* index.php [QSA]
+
