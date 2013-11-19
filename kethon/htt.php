@@ -91,6 +91,7 @@ $facebook = new Facebook(array(
 	'secret' => FACEBOOK_APP_SECRET,
 ));
 $user = $facebook->getUser();
+var_dump($user);die;
 if($user) {
 	$imgName = session_id() . '.png';
 	$path = 'images/user/' . $imgName;
