@@ -9,7 +9,7 @@ class FriendsController extends AppController {
 	
 	public function top10(){
 		$this->autoRender=false;
-		$pageId = '631117656921497';
+		$pageId = '459312580831141';//631117656921497
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
 	 		'appId' => '583960041669244',

@@ -9,6 +9,7 @@ class MessageController extends AppController {
 	
 	public function count(){
 		$this->autoRender=false;
+		$pageId = '459312580831141';
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
 			'appId' => $config['appId'],
@@ -31,7 +32,7 @@ class MessageController extends AppController {
 			//$facebook->setAccessToken($facebook->getAccessTokenFromCode($_GET['code']));
 			
 			//631117656921497
-			$likes = $facebook->api("/me/likes/631117656921497"); 
+			$likes = $facebook->api("/me/likes/" . $pageId);
 
 
 			if(empty($likes['data'])) {
