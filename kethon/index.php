@@ -29,7 +29,7 @@ if(!$user) {
 	<title>Giấy chứng nhận kết hôn <3 :.</title>
 	<style type="text/css"> 
 		body {
-			background: #FF69B4 url(bg.jpg);
+			background: #FF69B4 url('images/bg.jpg');
 		    font-family: Verdana, Arial, Helvetica, Sans-serif;
 		    font-size: 15px;
 		    text-align: center;
