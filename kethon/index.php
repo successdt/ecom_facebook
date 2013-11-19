@@ -73,8 +73,8 @@ if(!$user) {
 				</tr>
 				<tr>
 					<td>Số CMND</td>
-					<td><input type="text" required="required" name="cmck" /></td>
-					<td><input type="text" required="required" name="cmvk" /></td>
+					<td><input type="text" required="required" name="cmck" maxlength="11" /></td>
+					<td><input type="text" required="required" name="cmvk" maxlength="11" /></td>
 				</tr>
 				<tr>
 					<td>Chữ ký</td>

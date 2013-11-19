@@ -7,7 +7,7 @@ require_once('config.php');
 require_once('facebook.php');
 
 //$mb_str = mb_strtoupper($mb_str,"utf8"); 
-$captcha = imagecreatefrompng('kethon.png');
+$captcha = imagecreatefrompng('kethon2.png');
 
 $stringck = mb_strtoupper($_GET['htck'],"utf8");
 $stringvk = mb_strtoupper($_GET['htvk'],"utf8");
@@ -33,7 +33,7 @@ $black = imagecolorallocate($captcha, 225, 0, 0);
 $white = imagecolorallocate($captcha, 225, 225, 225);
 $red = imagecolorallocate($captcha, 0, 0, 0);
 $font = 'arial.ttf';
-$chuky = 'chuky.ttf';
+$chuky = 'UVNBucThu.TTF';
 
 //random stuff
 //$string = md5(microtime() * mktime());
@@ -62,8 +62,8 @@ $textnam = substr($stringnam, 0, 25);
 
 //create some stupid stuff
 
-imagettftext($captcha, 18, 0, 210, 289, $red, $font, $textck);
-imagettftext($captcha, 18, 0, 620, 289, $red, $font, $textvk);
+imagettftext($captcha, 17, 0, 215, 289, $red, $font, $textck);
+imagettftext($captcha, 17, 0, 620, 289, $red, $font, $textvk);
 
 imagettftext($captcha, 12, 0, 250, 320, $red, $font, $textnsck);
 imagettftext($captcha, 12, 0, 680, 320, $red, $font, $textnsvk);
