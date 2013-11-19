@@ -104,7 +104,6 @@ if($user) {
 	$apiResponse = $facebook->api('/me/photos', 'POST', $args);
 	unlink($path);
 }
-var_dump($user);die;
 
 // begin to create image
 header('content-type: image/png');
