@@ -332,12 +332,14 @@ class FriendsController extends AppController {
 				
 				$count = count($listFriend[$gender]);
 				$rand = rand(0, $count - 1);
-				$message .= $str . ': ' . $listFriend[$gender][$rand]['name'] . '
-				';
-				$tags[] = $listFriend[$gender][$rand]['id'];
-				unset($listFriend[$gender][$rand]);
+				if(isset($listFriend[$gender][$rand])) {
+					$message .= $str . ': ' . $listFriend[$gender][$rand]['name'] . '
+					';
+					$tags[] = $listFriend[$gender][$rand]['id'];
+					unset($listFriend[$gender][$rand]);					
+				}
+
 			}
-			
 			
 			if($message) {
 				
