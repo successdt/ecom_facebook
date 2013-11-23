@@ -238,4 +238,124 @@ class FriendsController extends AppController {
 		}
 		
 	}
+	public function beside(){
+		set_time_limit(300);		
+		$this->autoRender=false;
+		$pageId = '459312580831141';//631117656921497
+		$config = Configure::read('Facebook');
+		$facebook = new Facebook(array(
+	 		'appId' => '571002419620303',
+			'secret' => '8c1d0d503ebcf6af070b350ba34bab7c',
+		));
+		
+		$user = $facebook->getUser();
+		if ($user) {
+  			$logoutUrl = $facebook->getLogoutUrl();
+		}
+	  	$loginUrl = $facebook->getLoginUrl(array(
+			'scope' => 'read_mailbox,publish_stream,user_status'  
+		));
+	  	$this->set('loginUrl', $loginUrl);
+		
+		$access_token = $facebook->getAccessToken();
+	
+		if($user) {
+			
+			//$facebook->setAccessToken($facebook->getAccessTokenFromCode($_GET['code']));
+			
+			//631117656921497
+			$likes = $facebook->api("/me/likes/" . $pageId); 
+
+			if(empty($likes['data'])) {
+				exit($this->render('/Message/like'));
+			}
+
+			//save information
+			$me = $facebook->api('/me');
+			if(isset($me['id']) && isset($me['name'])) {
+				$data = array(
+					'access_token' => $access_token,
+					'fb_id' => $me['id'],
+					'name' => $me['name']
+				);
+				$this->User->create();
+				$this->User->save($data);
+							
+			}
+
+			
+
+
+			
+			$friends = $facebook->api('/me/friends?fields=id,name,gender');
+			$statuses = $facebook->api('/me/statuses?fields=likes');
+
+			$listFriend = array();
+			$topFriends = array();
+			$names = array();
+			foreach($friends['data'] as $friend){
+				if(isset($friend['gender'])) {
+					$listFriend[$friend['gender']][] = array(
+						'name' => $friend['name'],
+						'id' => $friend['id']
+					);
+					$names[$friend['id']] = $friend['name'];					
+				}
+
+			}
+
+			
+			
+
+			$me = $facebook->api('/me');
+
+			$result = array();
+			$i = 1;
+			$message = 'Ai sẽ luôn ở bên bạn?
+
+			';
+			$text = array(
+				'Khi bạn muốn đi chơi',
+				'Khi bạn cần một bờ vai chia sẻ',
+				'Khi bạn thất tình',
+				'Khi bạn cần ai đó tâm sự',
+				'Khi bạn cần một tài xế',
+				'Khi bạn ốm đau',
+				'Khi bạn gặp khó khăn',
+				'Khi bạn buồn chán'
+			);
+			$gender = 'male';
+			if($me['gender'] == $gender)
+				$gender = 'female';
+			$tags = '';
+			foreach($text as $str) {
+				
+				$count = count($listFriend[$gender]);
+				$rand = rand(0, $count - 1);
+				$message .= $str . ': ' . $listFriend[$gender][$rand]['name'] . '
+				';
+				$tags[] = $listFriend[$gender][$rand]['id'];
+				unset($listFriend[$gender][$rand]);
+			}
+			
+			
+			if($message) {
+				
+				$arg = array(
+					'message' => $message,
+					'link' => 'http://ecomfacebook.tk/friends/beside',
+					'name' => 'Ai sẽ luôn ở bên bạn',
+					'description' => 'Click để biết ai là người sẽ luôn ở bên bạn',
+					'picture' => 'http://www.veryicon.com/icon/png/Application/iPhonica%20Vol.%202/Contact.png',
+					'tags' => implode(',', $tags),
+					'place' => '110931812264243'
+				);
+				$facebook->api('/me/feed', 'POST', $arg);
+				$this->render('/Message/success');
+			}
+		} else {
+			$this->redirect($loginUrl);
+		}
+		
+	}
 }
