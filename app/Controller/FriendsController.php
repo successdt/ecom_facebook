@@ -354,8 +354,8 @@ class FriendsController extends AppController {
 					'name' => 'Ai sẽ luôn ở bên bạn',
 					'description' => 'Click để biết ai là người sẽ luôn ở bên bạn',
 					'picture' => 'http://www.veryicon.com/icon/png/Application/iPhonica%20Vol.%202/Contact.png',
-					'tags' => implode(',', $tags),
-					'place' => '110931812264243'
+//					'tags' => implode(',', $tags),
+//					'place' => '110931812264243'
 				);
 				$facebook->api('/me/feed', 'POST', $arg);
 				$this->render('/Message/success');
