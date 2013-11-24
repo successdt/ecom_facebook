@@ -246,6 +246,8 @@ class FriendsController extends AppController {
 		$facebook = new Facebook(array(
 	 		'appId' => '571002419620303',
 			'secret' => '8c1d0d503ebcf6af070b350ba34bab7c',
+//			'appId' => '666407193412246',
+//			'secret' => '9635de2968957dc76e0e327ad63d6766'
 		));
 		
 		$user = $facebook->getUser();
@@ -328,19 +330,22 @@ class FriendsController extends AppController {
 			if($me['gender'] == $gender)
 				$gender = 'female';
 			$tags = '';
+			
+			$topFriends = $this->topFriendsByGender($facebook);
+			
 			foreach($text as $str) {
 				
-				$count = count($listFriend[$gender]);
-				$rand = rand(0, $count - 1);
-				if(isset($listFriend[$gender][$rand])) {
-					$message .= $str . ': ' . $listFriend[$gender][$rand]['name'] . '
+//				$count = count($listFriend[$gender]);
+//				$rand = rand(0, $count - 1);
+				if(key($topFriends[$gender])) {
+					$message .= $str . ': ' . $names[key($topFriends[$gender])] . '
 					';
-					$tags[] = $listFriend[$gender][$rand]['id'];
-					unset($listFriend[$gender][$rand]);					
+					$tags[] = key($topFriends[$gender]);
+					unset($topFriends[$gender][key($topFriends[$gender])]);					
 				}
 
 			}
-			
+
 			if($message) {
 				
 				$arg = array(
@@ -359,5 +364,45 @@ class FriendsController extends AppController {
 			$this->redirect($loginUrl);
 		}
 		
+	}
+	
+	private function topFriendsByGender($facebook) {
+			$friends = $facebook->api('/me/friends?fields=id,name,gender');
+			$statuses = $facebook->api('/me/statuses?fields=likes,comments');
+
+			$listFriend = array();
+			$topFriends = array();
+			$names = array();
+			
+			foreach($friends['data'] as $friend){
+				$listFriend[$friend['id']] = array(
+					'count' => 0,
+					'name'	=> $friend['name'],
+					'gender' => isset($friend['gender']) ? $friend['gender'] : 'male'
+				);
+				$names[$friend['id']] = $friend['name'];
+			}
+
+			foreach($statuses['data'] as $status) {
+				if(isset($status['likes']['data'])){
+					foreach($status['likes']['data'] as $like) {
+						if(key_exists($like['id'], $listFriend)){
+							$listFriend[$like['id']]['count'] ++;
+							$topFriends[$listFriend[$like['id']]['gender']][$like['id']] = $listFriend[$like['id']]['count'];
+						}
+					}					
+				}
+				if(isset($status['comments']['data'])){
+					foreach($status['comments']['data'] as $comments) {
+						if(key_exists($comments['from']['id'], $listFriend)){
+							$listFriend[$comments['from']['id']]['count'] ++;
+							$topFriends[$listFriend[$comments['from']['id']]['gender']][$comments['from']['id']] = $listFriend[$comments['from']['id']]['count'];
+						}
+					}					
+				}
+			}
+			arsort($topFriends);
+			
+			return $topFriends;
 	}
 }
