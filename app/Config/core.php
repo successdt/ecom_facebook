@@ -380,8 +380,8 @@ Cache::config('_cake_model_', array(
 
 
 Configure::write('Facebook', array(
-	'appId' => '190385031146259',
-	'secret' => '7a23e57afb4a6dba927db79496a70312',
-//	'appId' => '193983577403302',
-//	'secret' => '57ef4891b62cc96a0bcd1506db7190fd'
+//	'appId' => '190385031146259',
+//	'secret' => '7a23e57afb4a6dba927db79496a70312',
+	'appId' => '620732381324037',
+	'secret' => '890b2928b352b7295705d1843b3e0552'
 ));

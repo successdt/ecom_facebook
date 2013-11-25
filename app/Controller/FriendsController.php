@@ -12,8 +12,8 @@ class FriendsController extends AppController {
 		$pageId = '459312580831141';//631117656921497
 		$config = Configure::read('Facebook');
 		$facebook = new Facebook(array(
-	 		'appId' => '583960041669244',
-			'secret' => '74b006687d95bd01c11f8076695ccfa2',
+	 		'appId' => $config['appId'],
+			'secret' => $config['secret']
 //			'appId' => '666407193412246',
 //			'secret' => '9635de2968957dc76e0e327ad63d6766'
 		));
