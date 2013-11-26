@@ -380,8 +380,15 @@ Cache::config('_cake_model_', array(
 
 
 Configure::write('Facebook', array(
-//	'appId' => '190385031146259',
-//	'secret' => '7a23e57afb4a6dba927db79496a70312',
+
 	'appId' => '620732381324037',
-	'secret' => '890b2928b352b7295705d1843b3e0552'
+	'secret' => '890b2928b352b7295705d1843b3e0552',
+	'local' => array(
+		'appId' => '190385031146259',
+		'secret' => '7a23e57afb4a6dba927db79496a70312',	
+	),
+	'ung-dung-hot' => array(
+		'appId' => '396468183818110',
+		'secret' => '91a41e3d050d20ff2ad12e2d13b9c2b8',
+	)
 ));
