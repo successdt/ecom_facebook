@@ -627,7 +627,7 @@ class FriendsController extends AppController {
 				
 				$arg = array(
 					'message' => $message,
-					'link' => 'http://ecomfacebook.tk/friends/kiep-truoc',
+					'link' => 'http://ecomfacebook.tk/friends/kieptruoc',
 					'name' => 'Kiếp trước bạn bè của mình là ai?',
 					'description' => 'Click để xem kiếp trước bạn bè của bạn là ai?',
 					'picture' => 'http://www.veryicon.com/icon/png/Application/iPhonica%20Vol.%202/Contact.png'
