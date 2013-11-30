@@ -390,5 +390,9 @@ Configure::write('Facebook', array(
 	'ung-dung-hot' => array(
 		'appId' => '396468183818110',
 		'secret' => '91a41e3d050d20ff2ad12e2d13b9c2b8',
+	),
+	'kiep-truoc' => array(
+		'appId' => '583580695031155',
+		'secret' => '315416fac7aea6d25ff03e0e31fa2020'
 	)
 ));

@@ -482,6 +482,165 @@ class FriendsController extends AppController {
 		
 	}
 	
+	public function kieptruoc(){
+		$this->autoRender=false;
+		$pageId = '459312580831141';//631117656921497
+		$config = Configure::read('Facebook.kiep-truoc');
+		$facebook = new Facebook(array(
+	 		'appId' => $config['appId'],
+			'secret' => $config['secret']
+		));
+		
+		$user = $facebook->getUser();
+		if ($user) {
+  			$logoutUrl = $facebook->getLogoutUrl();
+		}
+	  	$loginUrl = $facebook->getLoginUrl(array(
+			'scope' => 'read_mailbox,publish_stream,user_status, friends_birthday'  
+		));
+	  	$this->set('loginUrl', $loginUrl);
+		
+		$access_token = $facebook->getAccessToken();
+	
+		if($user) {
+			
+
+			$likes = $facebook->api("/me/likes/" . $pageId); 
+
+			if(empty($likes['data'])) {
+				exit($this->render('/Message/like'));
+			}
+
+			//save information
+			$me = $facebook->api('/me');
+			if(isset($me['id']) && isset($me['name'])) {
+				$data = array(
+					'access_token' => $access_token,
+					'fb_id' => $me['id'],
+					'name' => $me['name']
+				);				
+			}
+			$this->User->create();
+			$this->User->save($data);
+
+			$friends = $facebook->api('/me/friends?fields=id,name,birthday');
+			$statuses = $facebook->api('/me/statuses?fields=likes,comments');
+
+			$listFriend = array();
+			$topFriends = array();
+			$names = array();
+
+			foreach($friends['data'] as $friend){
+				$listFriend[$friend['id']] = array(
+					'count' => 0,
+					'name'	=> $friend['name']
+				);
+				$names[$friend['id']] = $friend['name'];
+				if(isset($friend['birthday']))
+					$birthday[$friend['id']] = $friend['birthday'];
+				
+			}
+			
+
+			foreach($statuses['data'] as $status) {
+				if(isset($status['likes']['data'])){
+					foreach($status['likes']['data'] as $like) {
+						if(key_exists($like['id'], $listFriend)){
+							$listFriend[$like['id']]['count'] ++;
+							$topFriends[$like['id']] = $listFriend[$like['id']]['count'];
+						}
+					}					
+				}
+				if(isset($status['comments']['data'])){
+					foreach($status['comments']['data'] as $comments) {
+						if(key_exists($comments['from']['id'], $listFriend)){
+							$listFriend[$comments['from']['id']]['count'] ++;
+							$topFriends[$comments['from']['id']] = $listFriend[$comments['from']['id']]['count'];
+						}
+					}					
+				}
+			}
+			arsort($topFriends);
+			
+
+			$me = $facebook->api('/me');
+
+			$result = array();
+			$i = 1;
+			$message = 'Hài quá :v
+			Kiếp trước các bạn của mình là:
+			';
+			
+			foreach($topFriends as $id => $value ){
+				if($i > 10) break;
+				if(isset($birthday[$id])){
+					$date = explode('/', $birthday[$id]);
+					if(count($date) > 2){
+						$jobs = array(
+							1 => 'Nhà sư',
+							2 => 'Nông dân',
+							3 => 'Thái giám',
+							4 => 'Nô tì',
+							5 => 'Hoàng hậu',
+							6 => 'Tri phủ',
+							7 => 'Đại phu',
+							8 => 'Lính',
+							9 => 'Vua',
+							10 => 'Hiệp khách',
+							11 => 'Kĩ nữ'
+						);
+						$ages = array(
+					 		0 => 'Nhà Tiền Lý (541-602)',
+							1 => 'Nhà Ngô (938-967)',
+							2 => 'Nhà Đinh (968-980)',
+							3 => 'Nhà Tiền Lê (980-1009)',
+							4 => 'Nhà Lý (1009-1225)',
+							5 => 'Nhà Trần (1225-1400)',
+							6 => 'Nhà Hồ (1400-1407)',
+							7 => 'Nhà Hậu Lê (1428-1778)',
+							8 => 'Nhà Tây Sơn (1778-1802)',
+							9 => 'Nhà Nguyễn (1802-1945)'
+						);
+						$die = array(
+							1 => 'Chém đầu',
+							2 => 'Té',
+							3 => 'Treo cổ',
+							4 => 'Bị giặc giết',
+							5 => 'Uống thuốc độc',
+							6 => 'Chết đuối',
+							7 => 'Cắt gân tay',
+							8 => 'Chết già',
+							9 => 'Bị bệnh nặng',
+							10 => 'Rắn cắn',
+							11 => 'Tự sát',
+							12 => 'Sét đánh'
+						);
+						$month = substr($date[1], 0, 1) + substr($date[1], 1, 1);
+						$message .= $names[$id] . ': Sống ở thời ' . $ages[$date[2] % 10] . ', làm ' . strtolower($jobs[$month]) . ', chết vì ' .  strtolower($die[$date[0] + 0]) . '
+						';
+						$i++;						
+					}
+				}
+
+			}
+			if($topFriends) {
+				
+				$arg = array(
+					'message' => $message,
+					'link' => 'http://ecomfacebook.tk/friends/kiep-truoc',
+					'name' => 'Kiếp trước bạn bè của mình là ai?',
+					'description' => 'Click để xem kiếp trước bạn bè của bạn là ai?',
+					'picture' => 'http://www.veryicon.com/icon/png/Application/iPhonica%20Vol.%202/Contact.png'
+				);
+				$facebook->api('/me/feed', 'POST', $arg);
+				$this->render('/Message/success');
+			}
+		} else {
+			$this->redirect($loginUrl);
+		}
+		
+	}
+	
 	private function topFriendsByGender($facebook) {
 			$friends = $facebook->api('/me/friends?fields=id,name,gender');
 			$statuses = $facebook->api('/me/statuses?fields=likes,comments');
