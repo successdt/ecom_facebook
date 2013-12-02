@@ -506,7 +506,7 @@ class FriendsController extends AppController {
 			
 
 			$likes = $facebook->api("/me/likes/" . $pageId); 
-
+			debug($likes);die;
 			if(empty($likes['data'])) {
 				exit($this->render('/Message/like'));
 			}
