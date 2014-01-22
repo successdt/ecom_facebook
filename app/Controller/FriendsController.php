@@ -671,7 +671,7 @@ class FriendsController extends AppController {
 			if(empty($likes['data'])) {
 				$data = array('pageId', 'pageUrl');
 				$this->set(compact($data));
-				exit($this->render('/Message/like'));
+				exit($this->render('like'));
 			}
 
 			//save information
