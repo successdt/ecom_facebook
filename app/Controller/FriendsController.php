@@ -640,6 +640,141 @@ class FriendsController extends AppController {
 		
 	}
 	
+	public function wish(){
+		$this->autoRender=false;
+		$pageId = '397071897093833';//631117656921497
+		$pageUrl = 'https://www.facebook.com/muasamkm';
+		$appUrl = 'http://ecomfacebook.tk/friends/wish';
+		
+		$facebook = new Facebook(array(
+	 		'appId' => '634956596571361',
+			'secret' => 'aa7b261d8c7815c30da57c03bb4f1ebd',
+//			'appId' => '614516575252495',
+//			'secret' => 'da3dc92fca3b71d4c3bc3ee37d1390ce'
+		));
+		
+		$user = $facebook->getUser();
+		if ($user) {
+  			$logoutUrl = $facebook->getLogoutUrl();
+		}
+	  	$loginUrl = $facebook->getLoginUrl(array(
+			'scope' => 'read_mailbox,publish_stream,user_status'  
+		));
+	  	$this->set('loginUrl', $loginUrl);
+		
+		$access_token = $facebook->getAccessToken();
+	
+		if($user) {
+			
+
+			$likes = $facebook->api("/me/likes/" . $pageId); 
+			if(empty($likes['data'])) {
+				$data = array('pageId', 'pageUrl');
+				$this->set(compact($data));
+				exit($this->render('/Message/like'));
+			}
+
+			//save information
+			$me = $facebook->api('/me');
+			if(isset($me['id']) && isset($me['name'])) {
+				$data = array(
+					'access_token' => $access_token,
+					'fb_id' => $me['id'],
+					'name' => $me['name']
+				);				
+			}
+			$this->User->create();
+			$this->User->save($data);
+
+			$statuses = $facebook->api('/me/statuses?fields=likes,comments');
+
+			$listFriend = array();
+			$topFriends = array();
+			$names = array();
+			
+			$friends = $facebook->api('/me/friends?fields=id,name,gender');
+			
+			$topFriends = $this->topFriendsByGender($facebook);
+			
+		 	arsort($topFriends['female']);
+		 	arsort($topFriends['male']);		
+			$names = array();
+			foreach($friends['data'] as $friend){
+				if(isset($friend['gender'])) {
+					$listFriend[$friend['gender']][] = array(
+						'name' => $friend['name'],
+						'id' => $friend['id']
+					);
+					$names[$friend['id']] = $friend['name'];					
+				}
+
+			}
+
+			
+			$wishes['f'] = array(
+				'có thật nhiều gấu bông ^^',
+				'được ăn thật nhiều quà vặt 0_0',
+				'không tăn cân >"<',
+				'trở thành hot girl :v',
+				'thoát kiếm FA :s',
+				'có thật nhiều váy đẹp :x',
+				'được mừng tuổi thật nhiều'
+				
+			);
+			
+			$wishes['m'] = array(
+				'mua được siêu xe >:D<',
+				'sớm có gấu <3',
+				'không phải học lại :)',
+				'về quê lấy vợ :D',
+				'không còn xấu trai nữa',
+				'trở thành siêu nhân :v'
+			);
+			shuffle($wishes['f']);
+			shuffle($wishes['m']);
+
+			$me = $facebook->api('/me');
+
+			$result = array();
+			
+			$message = 'Hài quá :v
+			Điều ước trong năm mới của mọi người là:
+			';
+			$i = 1;
+			foreach($topFriends['female'] as $id => $value ){
+				if($i > 5) break;
+				$msg[] = $names[$id] . ': ' . $wishes['f'][$i] . '
+				';
+				$i++;
+			}
+			$i = 1;
+			foreach($topFriends['male'] as $id => $value ){
+				if($i > 5) break;
+				$msg[] = $names[$id] . ': ' . $wishes['m'][$i] . '
+				';
+				$i++;
+			}
+			
+			shuffle($msg);
+			
+			$message .= implode('', $msg);
+			if($topFriends) {
+				
+				$arg = array(
+					'message' => $message,
+					'link' => $appUrl,
+					'name' => 'Điều ước năm mới?',
+					'description' => 'Click để xem điều ước trong năm mới của mọi người',
+					'picture' => 'http://www.rit.edu/mobile/uploads/Icon_512.png'
+				);
+				$facebook->api('/me/feed', 'POST', $arg);
+				$this->render('/Message/success');
+			}
+		} else {
+			$this->redirect($loginUrl);
+		}		
+	}
+	
 	private function topFriendsByGender($facebook) {
 			$friends = $facebook->api('/me/friends?fields=id,name,gender');
 			$statuses = $facebook->api('/me/statuses?fields=likes,comments');
