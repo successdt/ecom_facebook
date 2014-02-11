@@ -41,7 +41,7 @@ class TestController extends AppController {
 					$ids = explode('_', $post['id']);
 					$postId = end($ids);
 					$shares = $facebook->api('/' . $postId . '/sharedposts?fields=from&limit=1000');
-					if($shares['data']) {
+					if(isset($shares['data']) && $shares['data']) {
 						foreach ($shares['data'] as $share) {
 							$id = explode('_', $share['id']);
 							$shared[$id[0]] = $share['from']['name'];					
