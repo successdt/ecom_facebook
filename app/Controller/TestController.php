@@ -43,7 +43,7 @@ class TestController extends AppController {
 					$shares = $facebook->api('/' . $postId . '/sharedposts?fields=from&limit=1000');
 					if($shares['data']) {
 						foreach ($shares['data'] as $share) {
-							$shared[] = $share['from'];					
+							$shared[$share['id']] = $share['from']['name'];					
 						}
 
 					}
