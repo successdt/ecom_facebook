@@ -14,10 +14,10 @@ class TestController extends AppController {
 		if(!$pageID)
 			exit('Bạn vui lòng nhập page_id');
 		$facebook = new Facebook(array(
-//	 		'appId' => '634956596571361',
-//			'secret' => 'aa7b261d8c7815c30da57c03bb4f1ebd',
-			'appId' => '614516575252495',
-			'secret' => 'da3dc92fca3b71d4c3bc3ee37d1390ce'
+	 		'appId' => '634956596571361',
+			'secret' => 'aa7b261d8c7815c30da57c03bb4f1ebd',
+//			'appId' => '614516575252495',
+//			'secret' => 'da3dc92fca3b71d4c3bc3ee37d1390ce'
 		));
 
 		$user = $facebook->getUser();
