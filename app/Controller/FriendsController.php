@@ -487,8 +487,8 @@ class FriendsController extends AppController {
 		$pageId = '459312580831141';//631117656921497
 		$config = Configure::read('Facebook.kiep-truoc');
 		$facebook = new Facebook(array(
-	 		'appId' => '808933055798815',
-			'secret' => '75b55c8e75d8ecd14570e9dbb019b613'
+	 		'appId' => '626511720750170',
+			'secret' => 'e164c516ac0c3080eb6a8a4117e95302'
 		));
 		
 		$user = $facebook->getUser();
