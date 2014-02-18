@@ -484,7 +484,8 @@ class FriendsController extends AppController {
 	
 	public function kieptruoc(){
 		$this->autoRender=false;
-		$pageId = '459312580831141';//631117656921497
+		$pageId = '397071897093833';//631117656921497
+		$pageUrl = 'https://www.facebook.com/muasamkm';
 		$config = Configure::read('Facebook.kiep-truoc');
 		$facebook = new Facebook(array(
 	 		'appId' => '626511720750170',
@@ -507,7 +508,9 @@ class FriendsController extends AppController {
 
 			$likes = $facebook->api("/me/likes/" . $pageId); 
 			if(empty($likes['data'])) {
-				exit($this->render('/Message/like'));
+				$data = array('pageId', 'pageUrl');
+				$this->set(compact($data));
+				exit($this->render('ike'));
 			}
 
 			//save information
