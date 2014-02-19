@@ -42,7 +42,7 @@ class TestController extends AppController {
 			$sharedUser = $this->UserShare->find('list', array(
 				'conditions' => array(
 					'share_date >=' =>  $lastWeek,
-					'page_id' => $pageID
+					'AND' => array('page_id' => $pageID)
 				),
 				'fields' => array('fb_id'),
 				'limit' => 1000					
@@ -79,7 +79,7 @@ class TestController extends AppController {
 			$sharedUser = $this->UserShare->find('all', array(
 				'conditions' => array(
 					'share_date >=' =>  $lastWeek,
-					'page_id' => $pageID
+					'AND' => array('page_id' => $pageID)
 					)				
 				)
 		 	);
