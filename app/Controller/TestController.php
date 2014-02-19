@@ -41,8 +41,10 @@ class TestController extends AppController {
 			$lastWeek = date('U', time()) - 7 * 86400;
 			$sharedUser = $this->UserShare->find('list', array(
 				'conditions' => array(
-					'share_date >=' =>  $lastWeek,
-					'AND' => array('page_id' => $pageID)
+					'AND' => array(
+						array('page_id' => $pageID),
+						array('share_date >=' =>  $lastWeek)
+					)
 				),
 				'fields' => array('fb_id'),
 				'limit' => 1000					
@@ -78,9 +80,11 @@ class TestController extends AppController {
 			//get data to display
 			$sharedUser = $this->UserShare->find('all', array(
 				'conditions' => array(
-					'share_date >=' =>  $lastWeek,
-					'AND' => array('page_id' => $pageID)
-					)				
+					'AND' => array(
+						array('page_id' => $pageID),
+						array('share_date >=' =>  $lastWeek)
+						)				
+					)
 				)
 		 	);
 			foreach($sharedUser as $user){
