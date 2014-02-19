@@ -59,8 +59,7 @@ class TestController extends AppController {
 					if(isset($shares['data']) && $shares['data']) {
 						foreach ($shares['data'] as $share) {
 							$id = explode('_', $share['id']);
-							
-							if(!in_array($id, $sharedUser)) {
+							if(!in_array($id[0], $sharedUser)) {
 								$data[] = array(
 									'fb_id' => $id[0],
 									'fb_name' => $share['from']['name'],
