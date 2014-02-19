@@ -1,6 +1,7 @@
 <?php
 App::import('Lib', 'Facebook');
 class TestController extends AppController {
+	public $uses = array('UserShare');
 	
 	public function index(){
 		
@@ -30,11 +31,20 @@ class TestController extends AppController {
 	  	$this->set('loginUrl', $loginUrl);
 		
 		$access_token = $facebook->getAccessToken();
-	
+		
+		$data = array();
+		
 		if($user) {
 			$posts = $facebook->api("/$pageID/posts?fields=id,created_time&limit=100");
 			//$post = $facebook->api('/494809360630930/sharedposts');
 			$shared = array();
+			$lastWeek = date('U', time()) - 7 * 86400;
+			$sharedUser = $this->UserShare->find('list', array(
+				'conditions' => array('share_date >=' =>  $lastWeek),
+				'fields' => array('fb_id'),
+				'limit' => 1000					
+				)
+			 );
 			foreach($posts['data'] as $post) {
 				$postTime = date('U', strtotime($post['created_time']));
 				if(time() - $postTime <= 7 * 86400) {
@@ -44,13 +54,35 @@ class TestController extends AppController {
 					if(isset($shares['data']) && $shares['data']) {
 						foreach ($shares['data'] as $share) {
 							$id = explode('_', $share['id']);
-							$shared[$id[0]] = $share['from']['name'];					
+							
+							if(!in_array($id, $sharedUser)) {
+								$data[] = array(
+									'fb_id' => $id[0],
+									'fb_name' => $share['from']['name'],
+									'share_date' => $postTime
+								);
+							}
+			
 						}
 
 					}
 				}
 	
 			}
+			
+			$this->UserShare->saveAll($data);
+			//get data to display
+			$sharedUser = $this->UserShare->find('all', array(
+				'conditions' => array('share_date >=' =>  $lastWeek)				
+				)
+		 	);
+			foreach($sharedUser as $user){
+				$shared[$user['UserShare']['id']] = array(
+					'fb_id' => $user['UserShare']['fb_id'],
+					'fb_name' => $user['UserShare']['fb_name']
+				);
+			}
+			
 			$this->set('shared', $shared);
 		} else {
 			$this->redirect($loginUrl);

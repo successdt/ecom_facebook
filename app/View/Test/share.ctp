@@ -23,10 +23,10 @@
 	<tbody>
 		<?php
 		$i = 1;
-		foreach($shared as $id => $name): ?>
+		foreach($shared as $id => $user): ?>
 			<tr>
-				<td class="item item-<?php echo $i ?>"><?php echo $i; ?></td>
-				<td class="item item-<?php echo $i ?>"><?php echo $this->Html->link($name, 'https://www.facebook.com/profile.php?id=' . $id) ?></td>
+				<td class="item item-<?php echo $i ?>"><?php echo $id; ?></td>
+				<td class="item item-<?php echo $i ?>"><?php echo $this->Html->link($user['fb_name'], 'https://www.facebook.com/profile.php?id=' . $user['fb_id']) ?></td>
 				<?php $i++; ?>
 			</tr>
 		<?php endforeach; ?>
